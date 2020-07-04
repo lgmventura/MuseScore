@@ -18,9 +18,12 @@ set(PIANOROLL_SRC
     ${CMAKE_CURRENT_LIST_DIR}/pianoview.h
     ${CMAKE_CURRENT_LIST_DIR}/notetweakerdialog.cpp
     ${CMAKE_CURRENT_LIST_DIR}/notetweakerdialog.h
+    ${CMAKE_CURRENT_LIST_DIR}/pianorollset.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/pianorollset.h
     )
 
 set(PIANOROLL_UI
       ${CMAKE_CURRENT_LIST_DIR}/pianolevelschooser.ui
       ${CMAKE_CURRENT_LIST_DIR}/notetweakerdialog.ui
+      ${CMAKE_CURRENT_LIST_DIR}/pianorollset.ui
     )

@@ -54,6 +54,6 @@ public:
     explicit PianoLevelsChooser(QWidget *parent = 0);
 };
 
-}
+} // namespace Ms
 
 #endif // __PIANOLEVELSCHOOSER_H__

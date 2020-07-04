@@ -127,7 +127,7 @@ if (NOT APPLE AND NOT MINGW AND NOT MSVC)
       #option(BUILD_PORTMIDI "PortMidi disabled on Linux. (It uses ALSA but it's better to use ALSA directly)" OFF)
 endif (NOT APPLE AND NOT MINGW AND NOT MSVC)
 
-option(AEOLUS        "Enable pipe organ synthesizer"      OFF)
+option(AEOLUS        "Enable pipe organ synthesizer"      ON)
 option(ZERBERUS      "Enable experimental SFZ sampler"    ON)
 option(OSC           "Enable OSC remote control protocol" ON)
 option(AVSOMR        "Enable AVSOMR import"               OFF) # AVSOMR - optical music recognition by audirevis

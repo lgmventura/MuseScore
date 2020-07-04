@@ -1,6 +1,5 @@
 #include "pianolevelschooser.h"
 #include "pianolevelsfilter.h"
-#include "pianoroll.h"
 
 #include "pianorollset.h"
 
@@ -17,7 +16,7 @@ PianoLevelsChooser::PianoLevelsChooser(QWidget *parent)
 {
       setupUi(this);
 
-      _levelsIndex = 0;
+      *_levelsIndex = 0;
 
       for (int i = 0; PianoLevelsFilter::FILTER_LIST[i]; ++i) {
             QString name = PianoLevelsFilter::FILTER_LIST[i]->name();
@@ -36,8 +35,8 @@ PianoLevelsChooser::PianoLevelsChooser(QWidget *parent)
 
 void PianoLevelsChooser::setLevelsIndex(int index)
 {
-      if (_levelsIndex != index) {
-            _levelsIndex = index;
+      if (*_levelsIndex != index) {
+            *_levelsIndex = index;
             emit levelsIndexChanged(index);
             }
 }
@@ -50,10 +49,9 @@ void PianoLevelsChooser::setLevelsIndex(int index)
 void PianoLevelsChooser::setEventDataPressed()
       {
             PianoRollSet* pianoRollSet = new PianoRollSet;
-            pianoRollSet->setStaff(_staff);
+            connect(pianoRollSet,       SIGNAL(notesChanged()),                SLOT(selectionChanged()));
             pianoRollSet->setWindowTitle("Set");
             pianoRollSet->show();
-            emit notesChanged();
       }
 
 }

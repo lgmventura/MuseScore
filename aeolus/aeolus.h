@@ -21,8 +21,8 @@
 #define __AEOLUS_H__
 
 #include "stdint.h"
-#include "synthesizer/synthesizer.h"
-#include "synthesizer/midipatch.h"
+#include "audio/midi/synthesizer.h"
+#include "audio/midi/midipatch.h"
 
 #include "asection.h"
 #include "division.h"

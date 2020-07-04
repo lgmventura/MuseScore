@@ -28,7 +28,7 @@ namespace Ms {
       extern QString mscoreGlobalShare;
       };
 
-#include "synthesizer/event.h"
+#include "audio/midi/event.h"
 #include "libmscore/xml.h"
 #include "sparm_p.h"
 
@@ -70,16 +70,16 @@ Aeolus::Aeolus() : Synthesizer()
       _fsamp = 0.0f;
       _fsize = 0;
       _ifc_init = nullptr;
-      _midimap = { 0 };
-      _asectp = { nullptr };
-      _divisp = { nullptr };
-      _keymap = { 0 };
-      _audiopar = { 0.0f };
-      routb = { 0.0f };
-      loutb = { 0.0f };
-      _asectpar = { nullptr };
-      _ifelms = { 0 };
-      _tempstr = { 0 };
+      _midimap[1] = { 0 };
+      _asectp[1] = { nullptr };
+      _divisp[1] = { nullptr };
+      _keymap[1] = { 0 };
+      _audiopar[1] = { 0.0f };
+      routb[1] = { 0.0f };
+      loutb[1] = { 0.0f };
+      _asectpar[1] = { nullptr };
+      _ifelms[1] = { 0 };
+      _tempstr[1] = { 0 };
       }
 
 Aeolus::~Aeolus()

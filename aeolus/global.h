@@ -91,8 +91,8 @@ enum // GLOBAL LIMITS
 #define HOLD_MASK 64
 #define ALL_MASK 127
 
-#include "synthesizer/synthesizer.h"
-#include "synthesizer/midipatch.h"
+#include "audio/midi/synthesizer.h"
+#include "audio/midi/midipatch.h"
 #include "effects/effect.h"
 #include "sparm.h"
 

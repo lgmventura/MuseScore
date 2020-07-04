@@ -13,7 +13,7 @@
 #ifndef __AEOLUSGUI_H__
 #define __AEOLUSGUI_H__
 
-#include "synthesizer/synthesizergui.h"
+#include "audio/midi/synthesizergui.h"
 #include "ui_aeolus_gui.h"
 #include "aeolus.h"
 

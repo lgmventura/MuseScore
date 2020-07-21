@@ -1,7 +1,7 @@
 #ifndef PIANOROLLSET_H
 #define PIANOROLLSET_H
 
-#include <QWidget>
+#include <QDialog>
 
 #include "ui_pianorollset.h"
 
@@ -13,7 +13,7 @@ class PianoRollSet;
 
 namespace Ms {
 
-class PianoRollSet : public QWidget, public Ui::PianoRollSet
+class PianoRollSet : public QDialog, public Ui::PianoRollSet
 {
     Q_OBJECT
 
@@ -28,13 +28,12 @@ public:
       Staff* staff() { return _staff; }
       void setStaff(Staff* staff) { _staff = staff; }
 
-signals:
-      void notesChanged();
+      void setLevelsIndex(int index) {_levelsIndex = index; }
 
 private slots:
-    void on_buttonBox_accepted();
+      void on_buttonBox_accepted();
 
-    void on_buttonBox_rejected();
+      void on_buttonBox_rejected();
 
 private:
     Ui::PianoRollSet *ui;

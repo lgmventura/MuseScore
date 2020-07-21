@@ -49,8 +49,9 @@ void PianoLevelsChooser::setLevelsIndex(int index)
 
 void PianoLevelsChooser::setEventDataPressed()
       {
-            PianoRollSet* pianoRollSet = new PianoRollSet;
+            PianoRollSet* pianoRollSet = new PianoRollSet(this);
             pianoRollSet->setStaff(_staff);
+            pianoRollSet->setLevelsIndex(_levelsIndex);
             pianoRollSet->setWindowTitle("Set");
             pianoRollSet->show();
             emit notesChanged();

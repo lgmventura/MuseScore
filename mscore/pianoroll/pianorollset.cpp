@@ -1,5 +1,6 @@
 #include "pianorollset.h"
-//#include "ui_pianorollset.h"
+#include "ui_pianorollset.h"
+
 #include "pianolevelsfilter.h"
 
 #include "pianolevelschooser.h"
@@ -9,7 +10,7 @@
 namespace Ms {
 
 PianoRollSet::PianoRollSet(QWidget *parent) :
-    QWidget(parent),
+    QDialog(parent),
     ui(new Ui::PianoRollSet)
 {
     ui->setupUi(this);
@@ -63,15 +64,12 @@ void PianoRollSet::on_buttonBox_accepted()
           }
 
     score->endCmd();
-
-//    emit notesChanged();
 }
-
-void PianoRollSet::on_buttonBox_rejected()
-{
-    delete ui;
-}
-
 
 } // namespace Ms
 
+
+void Ms::PianoRollSet::on_buttonBox_rejected()
+{
+    delete ui;
+}
